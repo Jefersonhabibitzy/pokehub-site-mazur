@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poké Hub</title>
-    <style>
-        * {
+ {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -35,7 +28,7 @@
             align-items: center;
         }
 
-        .logo .poke .hub
+        .logo .poke .hub{
             color: #5d8bc9;
             margin-right: 5px;
         }
@@ -68,3 +61,4 @@
             background-color: #0a1f5c; 
             border-radius: 50%; 
             display: flex
+        }
