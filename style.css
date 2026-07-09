@@ -1,165 +1,49 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-.navbar {
-    display: table;
+.cabecalho-site {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #0e3386;
-    padding: 15px 30px;
-    color: white;
+    z-index: 1000;
 }
 
-.nav-logo {
-    display: table-cell;
-    vertical-align: middle;
+.cabecalho-site .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cabecalho-site .logo a {
+    text-decoration: none;
     font-size: 24px;
     font-weight: bold;
+    color: #333333;
 }
 
-.nav-logo span {
-    background-color: #f3a005;
-    color: #0e3386;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-left: 5px;
+.cabecalho-site .menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-.nav-links {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-}
-
-.nav-links a {
-    color: white;
+.cabecalho-site .menu-navegacao ul li a {
     text-decoration: none;
-    margin-left: 25px;
+    color: #555555;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.nav-profile {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-color: #1c2646;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-left: 25px;
-}
-
-.main-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 15px;
-}
-
-.p1-grid {
-    display: table;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 15px;
-}
-
-.p1-left-col {
-    display: table-cell;
-    width: 65%;
-    vertical-align: top;
-}
-
-.p1-right-col {
-    display: table-cell;
-    width: 35%;
-    vertical-align: top;
-    background: linear-gradient(180deg, #e63946 50%, #457b9d 50%);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
-
-.banner-principal {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    background-color: #ddd; 
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.banner-principal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.banner-texto {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-}
-
-.banner-texto h1 { font-size: 28px; }
-
-.p1-sub-row {
-    display: table;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 15px 0px;
-}
-
-.box-destaque, .box-mapa {
-    display: table-cell;
-    width: 50%;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    vertical-align: top;
-}
-
-.box-destaque h2 {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.pokemon-flex {
-    text-align: center;
-}
-
-.poke-thumb {
-    display: inline-block;
-    width: 45%;
-    margin: 2%;
-}
-
-.poke-thumb span {
-    display: block;
-    background: #eee;
-    padding: 4px;
-    font-size: 12px;
-    border-radius: 4px;
-    margin-bottom: 5px;
-}
-
-.poke-thumb img {
-    width: 100%;
-    max-height: 100px;
-    object-fit: contain;
-}
-
-.box-mapa img {
-    width: 100%;
-    height: auto;
-    display: block;
+.cabecalho-site .menu-navegacao ul li a:hover {
+    color: #007bff;
 }
