@@ -1,82 +1,259 @@
-{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .header {
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* Navbar Estilo Figma */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #0b2545;
+    padding: 15px 5%;
+    color: white;
+}
 
-        .logo a {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333333;
-            text-decoration: none;
-        }
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3a86ff;
+}
 
-        .logo span {
-            color: #007bff; 
-        }
+.logo span {
+    color: #ffb703;
+}
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+}
 
-        .nav-menu a {
-            text-decoration: none;
-            color: #555555;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+.nav-item {
+    color: #8da9c4;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        .nav-menu a:hover {
-            color: #007bff;
-        }
+.nav-item.active, .nav-item:hover {
+    color: white;
+}
 
-        .cta-button {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #134074;
+    border-radius: 50%;
+    margin-left: 20px;
+}
 
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
+/* Container de Controle das Telas */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
-        body {
-            padding-top: 90px;
-        }
+.screen {
+    display: none; /* Esconde todas as telas por padrão */
+}
 
-        media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
+.screen.active {
+    display: block; /* Mostra apenas a tela ativa */
+}
 
-            .nav-menu {
-                gap: 15px;
-            }
+/* Grid de Layout da Tela 1 */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Elementos da Tela 1 */
+.banner-praia {
+    background-image: url('fundo_praia.png'); /* Insira sua imagem de praia aqui */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 12px;
+    padding: 30px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-criaturas-lateral {
+    background-color: #eef4f8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.img-mini {
+    width: 80px;
+    height: auto;
+}
+
+.card-destaque {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.destaque-flex {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.poke-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+.poke-name {
+    display: block;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.card-mapa {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.img-mapa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos da Tela 2 (Marketing) */
+.marketing-bg {
+    position: relative;
+    background-image: url('fundo_marketing.png'); /* Imagem de fundo azul/céu da tela 2 */
+    background-size: cover;
+    height: 500px;
+    border-radius: 12px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.info-bubble {
+    position: absolute;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+    color: white;
+    font-size: 14px;
+}
+
+.info-bubble.azul { background-color: rgba(30, 144, 255, 0.9); top: 30px; left: 30px; }
+.info-bubble.verde { background-color: rgba(46, 139, 87, 0.9); top: 30px; right: 30px; }
+.info-bubble.vermelho { background-color: rgba(220, 20, 60, 0.9); bottom: 30px; left: 35%; }
+
+.personagens-marketing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.char-pos {
+    position: absolute;
+    width: 100px;
+}
+.azul-pos { bottom: 120px; left: 100px; }
+.verde-pos { bottom: 150px; right: 120px; }
+.vermelho-pos { bottom: 100px; left: 45%; }
+
+/* Estilos da Tela 3 (Sobre) */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-jogos-box, .votos-box, .logos-jogos-box, .traducao-box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.info-jogos-box {
+    background-color: #023e8a;
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.voto-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.voto-row img { width: 50px; }
+.voto-tag { font-weight: bold; display: block; }
+
+.logos-flex {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.logos-flex img { height: 60px; }
+
+.traducao-box {
+    text-align: center;
+    background-color: #0077b6;
+    color: white;
+}
+
+.img-bandeira {
+    width: 120px;
+    margin-top: 15px;
+}
+
+/* Botão Voltar Geral */
+.btn-voltar {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-voltar:hover { background-color: #555; }

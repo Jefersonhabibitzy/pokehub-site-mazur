@@ -1,18 +1,140 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokéhub</title>
+    <title>Poke Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- Menu Superior de Navegação -->
+    <header class="navbar">
+        <div class="logo">Poke <span>Hub</span></div>
+        <nav>
+            <a href="#" class="nav-item active">Home</a>
+            <a href="#" class="nav-item">Marketing</a>
+            <a href="#" class="nav-item">Sobre</a>
+        </nav>
+        <div class="profile-icon"></div>
+    </header>
+
+    <main class="container">
+        
+        <!-- TELA 1: HOME PRINCIPAL -->
+        <section id="tela-1" class="screen active">
+            <div class="grid-layout">
+                <!-- Banner Principal (Imagem de Praia) -->
+                <div class="banner-praia" id="btn-praia">
+                    <h2>Nova Geração anunciada</h2>
+                    <p>Depois de 4 anos de espera</p>
+                </div>
+
+                <!-- Card Lateral Direito -->
+                <div class="card-criaturas-lateral trigger-tela3">
+                    <!-- Substitua pelos caminhos das suas imagens -->
+                    <img src="criatura_fogo.png" alt="Criatura Fogo" class="img-mini">
+                    <img src="criatura_agua.png" alt="Criatura Água" class="img-mini">
+                    <img src="criatura_grama.png" alt="Criatura Grama" class="img-mini">
+                </div>
+
+                <!-- Card Pokémon Destaque Semanal -->
+                <div class="card-destaque trigger-tela3">
+                    <h3>Pokémon destaque semanal</h3>
+                    <div class="destaque-flex">
+                        <div class="poke-box">
+                            <span class="poke-name">sprigatito</span>
+                            <img src="sprigatito.png" alt="Sprigatito">
+                        </div>
+                        <div class="poke-box">
+                            <span class="poke-name">eevee</span>
+                            <img src="eevee.png" alt="Eevee">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Mapa do Brasil -->
+                <div class="card-mapa trigger-tela3">
+                    <img src="mapa_brasil.png" alt="Mapa do Brasil" class="img-mapa">
+                </div>
+            </div>
+        </section>
+
+        <!-- TELA 2: MARKETING (Detalhes das Criaturas) -->
+        <section id="tela-2" class="screen">
+            <button class="btn-voltar">← Voltar para Home</button>
+            <div class="marketing-bg">
+                <!-- Balão Gecqua -->
+                <div class="info-bubble azul">
+                    <h3>GECQUA</h3>
+                    <p>Gecqua foi anunciado como o pokémon do tipo água, a lagartixa azul com personalidade difícil.</p>
+                </div>
+                <!-- Balão Browt -->
+                <div class="info-bubble verde">
+                    <h3>BROWT</h3>
+                    <p>Browt foi anunciado como o pokémon do tipo grama, a ave verde brincalhona e divertida.</p>
+                </div>
+                <!-- Balão Ponbom -->
+                <div class="info-bubble vermelho">
+                    <h3>PONBOM</h3>
+                    <p>Ponbom foi anunciado como o pokémon do tipo fogo, o cachorro vermelho, divertido e brincalhão.</p>
+                </div>
+                <!-- Container dos personagens separados -->
+                <div class="personagens-marketing">
+                    <img src="criatura_agua.png" alt="Gecqua" class="char-pos azul-pos">
+                    <img src="criatura_grama.png" alt="Browt" class="char-pos verde-pos">
+                    <img src="criatura_fogo.png" alt="Ponbom" class="char-pos vermelho-pos">
+                </div>
+            </div>
+        </section>
+
+        <!-- TELA 3: SOBRE / INFORMAÇÕES DOS JOGOS -->
+        <section id="tela-3" class="screen">
+            <button class="btn-voltar">← Voltar para Home</button>
+            <div class="sobre-grid">
+                <!-- Bloco de Texto dos Jogos -->
+                <div class="info-jogos-box">
+                    <p>Pokémon Ventos e Pokémon Ondas (conhecidos internacionalmente como Winds e Waves) são os títulos da 10ª geração da franquia. A maior novidade é que eles serão os primeiros jogos principais da série a serem lançados totalmente localizados em Português do Brasil.</p>
+                </div>
+
+                <!-- Bloco de Pokémons Semanais com Votos -->
+                <div class="votos-box">
+                    <h3>Pokémons Semanais</h3>
+                    <div class="voto-row">
+                        <img src="sprigatito.png" alt="Sprigatito">
+                        <div>
+                            <span class="voto-tag">SPRIGATITO</span>
+                            <small>180.987 votos <br> 27.093 #</small>
+                        </div>
+                    </div>
+                    <div class="voto-row">
+                        <img src="eevee.png" alt="Eevee">
+                        <div>
+                            <span class="voto-tag">EEVEE</span>
+                            <small>289.634 votos <br> 13.096 #</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloco Logos dos Jogos -->
+                <div class="logos-jogos-box">
+                    <p>Os jogos têm lançamento global simultâneo previsto para 2027 e serão exclusivos do Nintendo Switch 2.</p>
+                    <div class="logos-flex">
+                        <img src="logo_winds.png" alt="Pokemon Winds">
+                        <img src="logo_waves.png" alt="Pokemon Waves">
+                    </div>
+                </div>
+
+                <!-- Bloco Bandeira e Tradução -->
+                <div class="traducao-box">
+                    <p>Tradução estará disponível em português PT-BR</p>
+                    <img src="bandeira_brasil.png" alt="Bandeira do Brasil" class="img-bandeira">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
- <nav>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="Pokedex">Sobre</a></li>
-                    <li><a href="marketplace">Serviços</a></li>
-                </ul>
-            </nav>
