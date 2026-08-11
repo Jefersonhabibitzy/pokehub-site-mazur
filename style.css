@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #05162e;
+    background-color: #053476;
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
@@ -108,7 +108,7 @@ nav a {
 .p2-container {
     width: 100%;
     height: 500px;
-    background: url('Firefly_Gemini Flash_remover os três animais no centro da imagem (o pássaro amarelo-esverdeado, o cão lara 331273 1.png') center/cover no-repeat;
+    background: url('images-removebg-preview (3) 1.png images-removebg-preview (2) 1.png images-removebg-preview (1) 2.png') center/cover no-repeat;
     border-radius: 10px;
     border: 4px solid #0056b3;
     position: relative;
