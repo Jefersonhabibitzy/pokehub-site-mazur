@@ -10,7 +10,6 @@ body {
     color: white;
 }
 
-/* --- HEADER / NAVBAR --- */
 header {
     background-color: #05162e;
     padding: 15px 50px;
@@ -34,7 +33,6 @@ nav a {
     font-weight: bold;
 }
 
-/* --- CONTROLE DE PÁGINAS --- */
 .page {
     display: none;
     padding: 40px;
@@ -46,12 +44,11 @@ nav a {
     display: block;
 }
 
-/* --- ESTILOS: PÁGINA 1 --- */
 .beach-banner {
     width: 100%;
     height: 350px;
-    /* AVISO: Substitua pelo link da imagem de fundo da praia com as criaturas */
-    background: url('COLOQUE_AQUI_A_IMAGEM_DE_FUNDO_DA_PRAIA_COM_CRIATURAS.jpg') center/cover no-repeat;
+
+    background: url('pokemon-winds-and-waves-gen-10-starters-revealed 1.png') center/cover no-repeat;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
@@ -108,19 +105,16 @@ nav a {
     margin-top: 10px;
 }
 
-/* --- ESTILOS: PÁGINA 2 --- */
 .p2-container {
     width: 100%;
     height: 500px;
-    /* AVISO: Imagem de fundo da segunda página */
-    background: url('COLOQUE_AQUI_A_IMAGEM_DE_FUNDO_DA_PAGINA_2.jpg') center/cover no-repeat;
+    background: url('Firefly_Gemini Flash_remover os três animais no centro da imagem (o pássaro amarelo-esverdeado, o cão lara 331273 1.png') center/cover no-repeat;
     border-radius: 10px;
     border: 4px solid #0056b3;
     position: relative;
     padding: 20px;
 }
 
-/* --- ESTILOS: PÁGINA 3 --- */
 .p3-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
