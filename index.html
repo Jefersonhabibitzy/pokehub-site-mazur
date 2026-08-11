@@ -4,126 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poke Hub</title>
+    <!-- Vinculação do arquivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">Poke <span>Hub</span></div>
+    <!-- CABEÇALHO FIXO -->
+    <header>
+        <div class="logo" id="logo-home">Poke Hub</div>
         <nav>
-            <a href="#" class="nav-item active">Home</a>
-            <a href="#" class="nav-item">Marketing</a>
-            <a href="#" class="nav-item">Sobre</a>
+            <a href="#" id="nav-home">Home</a>
+            <a href="#">Marketing</a>
+            <a href="#">Sobre</a>
         </nav>
-        <div class="profile-icon"></div>
     </header>
 
-    <main class="container">
-        
-        <section id="tela-1" class="screen active">
-            <div class="grid-layout">
-                <div class="banner-praia" id="btn-praia">
-                    <h2>Nova Geração anunciada</h2>
-                     <img src="pokemon-winds-and-waves-gen-10-starters-revealed 1.png" alt="banner">
-                    <p>Depois de 4 anos de espera</p>
-                </div>
+    <!-- PÁGINA 1 -->
+    <section id="page1" class="page active">
+        <!-- Banner de Praia (Garante ida à página 2 ao clicar) -->
+        <div class="beach-banner" id="btn-to-page2">
+            <div class="banner-text">
+                <h2>Nova Geração Anunciada</h2>
+                <p>Depois de 4 anos de espera</p>
+            </div>
+        </div>
 
-                <div class="card-criaturas-lateral trigger-tela3">
-                    <img src="images-removebg-preview (1) 2.png" alt="Criatura Fogo" class="img-mini">
-                    <img src="images-removebg-preview (3) 1.png" alt="Criatura Água" class="img-mini">
-                    <img src="images-removebg-preview (2) 1.png" alt="Criatura Grama" class="img-mini">
-                </div>
-
-                <div class="card-destaque trigger-tela3">
-                    <h3>Pokémon destaque semanal</h3>
-                    <div class="destaque-flex">
-                        <div class="poke-box">
-                            <span class="poke-name">sprigatito</span>
-                            <img src="images-removebg-preview (1) 1.png" alt="Sprigatito">
-                        </div>
-                        <div class="poke-box">
-                            <span class="poke-name">eevee</span>
-                            <img src="images-removebg-preview 1.png" alt="Eevee">
-                        </div>
+        <div class="p1-grid">
+            <!-- Destaque Semanal (Garante ida à página 3 ao clicar nos personagens) -->
+            <div class="highlight-box">
+                <h3>Pokémon destaque semanal</h3>
+                <div class="char-row">
+                    <div class="char-card btn-to-page3">
+                        <!-- AVISO: Imagem do Sprigatito -->
+                        <img src="COLOQUE_AQUI_A_IMAGEM_DO_SPRIGATITO.png" alt="Sprigatito">
+                        <p>sprigatito</p>
                     </div>
-                    
-                <di[
-                ]
-        ][
-        .p-0lkiughcf zdazwtfyguhnijmok,pl.ḉ;\qzwaxesrdcft ghjkml─ç]
-            []≃    ] class="card-mapa trigger-tela3">
-                    <img src="mapa_brasil.png" alt="Mapa do Brasil" class="img-mapa">
+                    <div class="char-card btn-to-page3">
+                        <!-- AVISO: Imagem do Eevee -->
+                        <img src="COLOQUE_AQUI_A_IMAGEM_DO_EEVEE.png" alt="Eevee">
+                        <p>eevee</p>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section id="tela-2" class="screen">
-            <button class="btn-voltar">← Voltar para Home</button>
-            <div class="marketing-bg">
-                <div class="info-bubble azul">
-                    <h3>GECQUA</h3>
-                    <p>Gecqua foi anunciado como o pokémon do tipo água, a lagartixa azul com personalidade difícil.</p>
-                </div>
+            <!-- Mapa do Brasil -->
+            <div class="map-box">
+                <h3>Regiões</h3>
+                <!-- AVISO: Imagem do Mapa do Brasil estilizado -->
+                <img src="COLOQUE_AQUI_A_IMAGEM_DO_MAPA_DO_BRASIL.png" alt="Mapa do Brasil">
+            </div>
+        </div>
+    </section>
 
-                <div class="info-bubble verde">
-                    <h3>BROWT</h3>
-                    <p>Browt foi anunciado como o pokémon do tipo grama, a ave verde brincalhona e divertida.</p>
+    <!-- PÁGINA 2 -->
+    <section id="page2" class="page">
+        <div class="p2-container">
+            <h2>Detalhes das Criaturas</h2>
+            <p style="margin-top: 20px;">
+                <!-- AVISO: Como o fundo já possui as criaturas e os balões no seu design do Figma, 
+                você pode exportar o fundo completo com os balões ou posicionar imagens individuais aqui. -->
+                As criaturas (Gecqua, Browt, Ponbom) e suas caixas de diálogo ficam renderizadas nesta seção.
+            </p>
+        </div>
+    </section>
+
+    <!-- PÁGINA 3 -->
+    <section id="page3" class="page">
+        <div class="p3-grid">
+            <!-- Box de Informações dos Jogos -->
+            <div class="game-info-box">
+                <p>Pokémon Ventos e Pokémon Ondas são os títulos da 10ª geração...</p>
+                <div class="logos-row">
+                    <!-- AVISO: Imagem da Logo Pokémon Winds -->
+                    <img src="COLOQUE_AQUI_A_LOGO_POKEMON_WINDS.png" alt="Pokemon Winds">
+                    <!-- AVISO: Imagem da Logo Pokémon Waves -->
+                    <img src="COLOQUE_AQUI_A_LOGO_POKEMON_WAVES.png" alt="Pokemon Waves">
                 </div>
-            
-                <div class="info-bubble vermelho">
-                    <h3>PONBOM</h3>
-                    <p>Ponbom foi anunciado como o pokémon do tipo fogo, o cachorro vermelho, divertido e brincalhão.</p>
-                </div>
-                
-                <div class="personagens-marketing">
-                    <img src="images-removebg-preview (3) 1.png" alt="Gecqua" class="char-pos azul-pos">
-                    <img src="images-removebg-preview (2) 1.png" alt="Browt" class="char-pos verde-pos">
-                    <img src="images-removebg-preview (1) 2.png" alt="Ponbom" class="char-pos vermelho-pos">
+                <p>Exclusivos do Nintendo Switch 2 (2027)</p>
+            </div>
+
+            <!-- Box de Votação Semanal -->
+            <div class="voting-box">
+                <h3>Pokémons Semanais</h3>
+                <div class="vote-row">
+                    <div class="vote-item">
+                        <!-- AVISO: Imagem do Sprigatito -->
+                        <img src="COLOQUE_AQUI_A_IMAGEM_DO_SPRIGATITO.png" alt="Sprigatito">
+                        <p>180.987 votos</p>
+                    </div>
+                    <div class="vote-item">
+                        <!-- AVISO: Imagem do Eevee -->
+                        <img src="COLOQUE_AQUI_A_IMAGEM_DO_EEVEE.png" alt="Eevee">
+                        <p>289.634 votos</p>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section id="tela-3" class="screen">
-            <button class="btn-voltar">← Voltar para Home</button>
-            <div class="sobre-grid
-                <div class="info-jogos-box">
-                    <p>Pokémon Ventos e Pokémon Ondas (conhecidos internacionalmente como Winds e Waves) são os títulos da 10ª geração da franquia. A maior novidade é que eles serão os primeiros jogos principais da série a serem lançados totalmente localizados em Português do Brasil.</p>
-                </div>
-
-                <div class="votos-box">
-                    <h3>Pokémons Semanais</h3>
-                    <div class="voto-row">
-                        <img src="sprigatito.png" alt="Sprigatito">
-                        <div>
-                            <span class="voto-tag">SPRIGATITO</span>
-                            <small>180.987 votos <br> 27.093 #</small>
-                        </div>
-                    </div>
-                    <div class="voto-row">
-                        <img src="eevee.png" alt="Eevee">
-                        <div>
-                            <span class="voto-tag">EEVEE</span>
-                            <small>289.634 votos <br> 13.096 #</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="logos-jogos-box">
-                    <p>Os jogos têm lançamento global simultâneo previsto para 2027 e serão exclusivos do Nintendo Switch 2.</p>
-                    <div class="logos-flex">
-                        <img src="Pokemon-Winds-and-Waves-announced-Switch-2-removebg-preview 1.png" alt="Pokemon Winds">
-                    </div>
-                </div>
-
-                <div class="traducao-box">
-                    <p>Tradução estará disponível em português PT-BR</p>
-                    <img src="bandeira_brasil.png" alt="Bandeira do Brasil" class="img-bandeira">
-                </div>
+            <!-- Box do Idioma / Brasil -->
+            <div class="brazil-box">
+                <h2>Tradução estará disponível em português PT-BR</h2>
+                <!-- AVISO: Imagem da Bandeira do Brasil/Planeta -->
+                <img src="COLOQUE_AQUI_A_IMAGEM_DA_BANDEIRA_DO_BRASIL.png" alt="Brasil">
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <script src="script.js"></script>
+    <!-- Vinculação do arquivo JavaScript externo -->
+    <script src="main.js"></script>
 </body>
 </html>
+

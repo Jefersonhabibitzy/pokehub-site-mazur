@@ -1,41 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Seleção das Telas
-    const tela1 = document.getElementById("tela-1");
-    const tela2 = document.getElementById("tela-2");
-    const tela3 = document.getElementById("tela-3");
+// Função principal para gerenciar a troca de telas (Abas)
+function goToPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
 
-    // Seleção dos Botões e Gatilhos de cliques
-    const btnPraia = document.getElementById("btn-praia");
-    const elementosTela3 = document.querySelectorAll(".trigger-tela3");
-    const botoesVoltar = document.querySelectorAll(".btn-voltar");
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+        targetPage.classList.add('active');
+    }
+}
 
-    // Função auxiliar para gerenciar qual tela fica visível
-    function alternarTela(telaAtiva) {
-        // Remove a classe active de todas as seções
-        tela1.classList.remove("active");
-        tela2.classList.remove("active");
-        tela3.classList.remove("active");
+// Configuração dos Eventos após o carregamento completo do HTML
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Retorno para a Página 1 (Home) ao clicar no Logo ou no link Home
+    document.getElementById('logo-home').addEventListener('click', () => goToPage('page1'));
+    document.getElementById('nav-home').addEventListener('click', () => goToPage('page1'));
 
-        // Adiciona à tela selecionada
-        telaAtiva.classList.add("active");
+    // Navegação: Clicar no banner de praia vai para a Página 2
+    const beachBanner = document.getElementById('btn-to-page2');
+    if (beachBanner) {
+        beachBanner.addEventListener('click', () => goToPage('page2'));
     }
 
-    // Regra 1: Clicar na imagem de praia (Banner) direciona para a Tela 2
-    btnPraia.addEventListener("click", () => {
-        alternarTela(tela2);
-    });
-
-    // Regra 2: Clicar em qualquer outra imagem/card da home direciona para a Tela 3
-    elementosTela3.forEach(elemento => {
-        elemento.addEventListener("click", () => {
-            alternarTela(tela3);
-        });
-    });
-
-    // Função dos botões de voltar para retornar à Home (Tela 1)
-    botoesVoltar.forEach(botao => {
-        botao.addEventListener("click", () => {
-            alternarTela(tela1);
-        });
+    // Navegação: Clicar nos cards de pokémons em destaque vai para a Página 3
+    const charCards = document.querySelectorAll('.btn-to-page3');
+    charCards.forEach(card => {
+        card.addEventListener('click', () => goToPage('page3'));
     });
 });
