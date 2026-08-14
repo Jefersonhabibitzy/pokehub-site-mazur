@@ -1,25 +1,18 @@
-function goToPage(pageId) {
-    const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.remove('active'));
-
-    const targetPage = document.getElementById(pageId);
-    if (targetPage) {
-        targetPage.classList.add('active');
+// Função responsável por fazer a transição de telas ocultando uma e mostrando outra
+function mudarTela(idDaTela) {
+    // Busca todas as telas do documento
+    const todasAsTelas = document.querySelectorAll('.tela');
+    
+    // Remove a classe 'ativa' de todas elas para escondê-las
+    todasAsTelas.forEach(tela => {
+        tela.classList.remove('ativa');
+    });
+    
+    // Encontra a tela desejada pelo ID e adiciona 'ativa' para mostrá-la
+    const telaDestino = document.getElementById(idDaTela);
+    if (telaDestino) {
+        telaDestino.classList.add('ativa');
+        // Rola a página automaticamente para o topo ao mudar de aba
+        window.scrollTo(0, 0);
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    document.getElementById('logo-home').addEventListener('click', () => goToPage('page1'));
-    document.getElementById('nav-home').addEventListener('click', () => goToPage('page1'));
-
-    const beachBanner = document.getElementById('btn-to-page2');
-    if (beachBanner) {
-        beachBanner.addEventListener('click', () => goToPage('page2'));
-    }
-
-    const charCards = document.querySelectorAll('.btn-to-page3');
-    charCards.forEach(card => {
-        card.addEventListener('click', () => goToPage('page3'));
-    });
-});
